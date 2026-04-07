@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import SpiderWebAnimation from '../../utils/SpiderWebAnimation';
 import './Footer.css';
 
@@ -66,83 +67,7 @@ const Footer = () => {
         <div className="inner-circle"></div>
       </div>
       
-      {/* Marquee Section */}
-      <div className="footer-two__top">
-        <div className="container-fluid px-0">
-          <div className="footer-two__marquee">
-            <div className="marquee-wrapper">
-              <ul className="sliding-text">
-                <li>
-                  <a href="#contact" className="text v2" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text v3" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text v2" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-              </ul>
-              <ul className="sliding-text" aria-hidden="true">
-                <li>
-                  <a href="#contact" className="text v2" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text v3" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text v2" onClick={openModal}>
-                    <img src="/assets/images/footer/footer-2-shape-4.png" alt="" />
-                    <span>Let's</span>
-                    Contact
-                    <img src="/assets/images/footer/footer-2-shape-3.png" alt="" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       {/* Main Footer Content */}
       <div className="footer-two__main">
@@ -154,7 +79,7 @@ const Footer = () => {
               <div className="col-md-6 col-lg-6 col-xxl-3">
                 <div className="footer-info">
                   <h2 className="footer-title title-highlight">
-                    Let's <br /> Join Us
+                    <br /> Join Us
                   </h2>
                   <p className="footer-desc">
                     Transform your business with cutting-edge IT solutions. Our team of experienced developers will guide you every step of the way with comprehensive support.
@@ -185,10 +110,11 @@ const Footer = () => {
                   <div className="link-list">
                     <ul>
                       <li><a href="/contact">Contact Us</a></li>
-                      <li><a href="/about">Privacy Policy</a></li>
+                      <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                       <li><a href="/blog">Blog Post</a></li>
-                      <li><a href="/about">Clients' Feedback</a></li>
-                      <li><a href="/about">Recognitions</a></li>
+                      <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+                      <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+                      <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
                     </ul>
                   </div>
                 </div>
@@ -202,13 +128,7 @@ const Footer = () => {
                     <div className="office-item">
                       <span className="label">Head Office – India</span>
                       <h6 className="location">
-                        Mumbai (Leading IT Hub In India)
-                      </h6>
-                    </div>
-                    <div className="office-item">
-                      <span className="label">Regional Office – USA</span>
-                      <h6 className="location">
-                        Silicon Valley (Tech Capital Of The World)
+                        NAFA - BARTER Madhapur, Kavuri Hills, Hyderabad
                       </h6>
                     </div>
                   </div>

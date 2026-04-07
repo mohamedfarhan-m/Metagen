@@ -1,22 +1,46 @@
-.hero-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
+/* ─── Hero Background ─────────────────────────────────────────── */
 .hero-two {
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    #0131e9 0%,
+    #075ee9 35%,
+    #0099ff 70%,
+    #00d4ff 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-two::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-two .container {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
-/* Remove blur effects and improve text rendering */
+/* ─── Sub-title ─────── */
+.hero-two .hero-sub-title {
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ─── Text rendering helpers ──────────────────────────────────── */
 .hero-title,
 .hero-next-title,
 .rotating-text,
@@ -29,20 +53,19 @@
 }
 
 .hero-title span {
-  display: inline-block;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
-/* Rotating Text Animation */
+/* ─── Rotating Text wrapper ──────────────────────────────────── */
 .rotating-text-wrapper {
   position: relative;
   height: 120px;
-  overflow: visible;
   margin: 30px 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  width: 100%;
+  overflow: visible;
 }
 
 .hero-next-title {
@@ -52,29 +75,25 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  overflow: visible;
 }
 
-/* Typing Effect */
+/* ─── Typing Effect ──────────────────────────────────────────── */
 .typing-text {
   font-size: 65px;
-  font-weight: 700;
-  color: #fe0100;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: 800;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  backface-visibility: hidden;
   display: inline-block;
-  text-align: left;
-  text-shadow: 0 0 20px rgba(254, 1, 0, 0.3);
+  max-width: 100%;
 }
 
-/* Typing Cursor */
+/* ─── Typing Cursor ──────────────────────────────────────────── */
 .typing-cursor {
   display: inline-block;
   margin-left: 5px;
-  color: #fe0100;
+  color: #00d4ff;
   font-weight: 400;
   animation: fadeInOut 0.8s ease-in-out infinite;
 }
@@ -84,23 +103,16 @@
 }
 
 @keyframes blinkCursor {
-  0%, 50% {
-    opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
-  }
+  0%, 50%  { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 @keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 1; }
 }
 
+/* ─── Legacy rotating-text ─────────────────────────────────────── */
 .rotating-text {
   position: absolute;
   top: 50%;
@@ -112,7 +124,7 @@
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   font-size: 65px;
   font-weight: 700;
-  color: #fe0100;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   white-space: nowrap;
@@ -130,19 +142,16 @@
 }
 
 @keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px rgba(254, 1, 0, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(254, 1, 0, 0.6), 0 0 30px rgba(254, 1, 0, 0.4);
-  }
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+  50%      { text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(0, 180, 255, 0.4); }
 }
 
-/* Hero Info Section Luxury Animations */
+/* ─── Info Card ──────────────────────────────────────────────── */
 .info-card {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
 }
 
 .info-card.animate-in {
@@ -150,10 +159,30 @@
   transform: translateX(0);
 }
 
-/* Counter Badge Pulse Animation */
+/* ─── Shimmer on info card ───────────────────────────────────── */
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ─── Counter badge ──────────────────────────────────────────── */
 .avatar-badge {
   animation: pulseGlow 2s ease-in-out infinite;
   transition: all 0.3s ease;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #0131e9, #00aaff) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 .pulse-animation {
@@ -163,29 +192,21 @@
 @keyframes pulseGlow {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 20px rgba(254, 1, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.5);
   }
   50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(254, 1, 0, 0.7), 0 0 60px rgba(254, 1, 0, 0.3);
+    transform: scale(1.06);
+    box-shadow: 0 0 40px rgba(0, 180, 255, 0.85), 0 0 70px rgba(0, 180, 255, 0.3);
   }
 }
 
 @keyframes scaleUp {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0%   { transform: scale(0); opacity: 0; }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-/* Avatar Items Bounce Animation */
+/* ─── Avatar items ───────────────────────────────────────────── */
 .bounce-animation {
   animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 0;
@@ -193,18 +214,9 @@
 }
 
 @keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0) rotate(0deg);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.2) rotate(10deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+  0%   { opacity: 0; transform: scale(0) rotate(0deg); }
+  60%  { opacity: 1; transform: scale(1.2) rotate(10deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
 .avatar-item:hover {
@@ -212,52 +224,61 @@
   transition: all 0.3s ease;
 }
 
-/* Info Text Slide Up Animation */
+.avatar-placeholder {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+}
+
+.avatar-placeholder i {
+  color: #ffffff !important;
+}
+
+/* ─── Info text ───────────────────────────────────────────────── */
+.info-text,
+.hero-two .info-text {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
 .slide-up-animation {
   animation: slideUpFade 0.8s ease-out 0.4s;
   animation-fill-mode: backwards;
 }
 
 @keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Info Items Floating Animation */
+/* ─── Info tag items (glassmorphism) ─────────────────────────── */
 .info-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px;
   position: relative;
 }
 
 .info-item {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, rgba(254, 1, 0, 0.1), rgba(44, 22, 84, 0.1));
-  border: 2px solid rgba(254, 1, 0, 0.3);
-  border-radius: 25px;
-  color: #2a1f54;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  cursor: pointer;
-  white-space: nowrap;
-  will-change: transform, opacity;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  perspective: 1000px;
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 13px;
 }
 
+.info-item:hover {
+  transform: translateZ(0) translateY(-8px) scale(1.08) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 200, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* ─── Tag animations ─────────────────────────────────────────── */
 .floating-animation {
   animation: floatingItemSmooth 4s ease-in-out infinite, fadeInScale 0.6s ease-out;
 }
@@ -267,117 +288,109 @@
 }
 
 @keyframes rotateTagInSmooth {
-  0% {
-    opacity: 0;
-    transform: translateZ(0) scale(0.5) translateY(20px);
-  }
-  60% {
-    opacity: 0.8;
-    transform: translateZ(0) scale(1.05) translateY(-3px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0) scale(1) translateY(0);
-  }
+  0%   { opacity: 0; transform: translateZ(0) scale(0.5) translateY(20px); }
+  60%  { opacity: 0.8; transform: translateZ(0) scale(1.05) translateY(-3px); }
+  100% { opacity: 1; transform: translateZ(0) scale(1) translateY(0); }
 }
 
 @keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: translateZ(0) scale(0.5) translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0) scale(1) translateY(0);
-  }
+  0%   { opacity: 0; transform: translateZ(0) scale(0.5) translateY(20px); }
+  100% { opacity: 1; transform: translateZ(0) scale(1) translateY(0); }
 }
 
 @keyframes floatingItemSmooth {
-  0%, 100% {
-    transform: translateZ(0) translateY(0px) scale(1);
-  }
-  25% {
-    transform: translateZ(0) translateY(-6px) scale(1.01);
-  }
-  50% {
-    transform: translateZ(0) translateY(-10px) scale(1.02);
-  }
-  75% {
-    transform: translateZ(0) translateY(-6px) scale(1.01);
-  }
+  0%, 100% { transform: translateZ(0) translateY(0px) scale(1); }
+  25%       { transform: translateZ(0) translateY(-6px) scale(1.01); }
+  50%       { transform: translateZ(0) translateY(-10px) scale(1.02); }
+  75%       { transform: translateZ(0) translateY(-6px) scale(1.01); }
 }
 
-.info-item:hover {
-  transform: translateZ(0) translateY(-8px) scale(1.08) !important;
-  box-shadow: 0 15px 35px rgba(254, 1, 0, 0.4);
-  border-color: rgba(254, 1, 0, 0.7);
-  background: linear-gradient(135deg, rgba(254, 1, 0, 0.25), rgba(44, 22, 84, 0.25));
+/* ─── Get Started button override ───────────────────────────── */
+.hero-two .button-v2 {
+  background: #ffffff;
+  color: #0131e9;
+  border-radius: 50px;
+  padding: 14px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
 }
 
-/* Add shimmer effect to info card */
-.info-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 3s infinite;
+.hero-two .button-v2:hover {
+  background: #0131e9;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
+/* ─── Color fixes ────────────────────────────────────────────── */
+.hero-next-title {
+  color: #e6f0ff !important;
 }
 
-/* Responsive */
+.hero-two .hero-content h1,
+.hero-two .hero-content h2,
+.hero-two .hero-content h5,
+.hero-two .hero-content span {
+  color: #ffffff !important;
+}
+
+.hero-two .hero-title span,
+.hero-two .hero-title .tp-text-revel-anim {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* ─── Responsive — 1440px+ ───────────────────────────────────── */
+@media (min-width: 1441px) {
+  .typing-text { font-size: 72px; }
+  .rotating-text { font-size: 72px; }
+  .rotating-text-wrapper { height: 130px; }
+}
+
+/* ─── Responsive — 1200px ───────────────────────────────────── */
+@media (max-width: 1200px) {
+  .typing-text { font-size: 56px; }
+  .rotating-text { font-size: 56px; }
+  .rotating-text-wrapper { height: 108px; margin: 24px 0; }
+  .hero-two .hero-sub-title { font-size: 12px; letter-spacing: 2px; }
+}
+
+/* ─── Responsive — 1024px ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  .typing-text { font-size: 48px; }
+  .rotating-text { font-size: 48px; }
+  .rotating-text-wrapper { height: 90px; margin: 20px 0; }
+  .info-item { font-size: 12px; padding: 7px 15px; }
+  .hero-two .button-v2 { padding: 12px 26px; }
+}
+
+/* ─── Responsive — 768px ────────────────────────────────────── */
 @media (max-width: 768px) {
-  .rotating-text-wrapper {
-    height: 80px;
+  .hero-two {
+    min-height: auto;
+    padding: 80px 0 60px;
+    align-items: flex-start;
   }
-  
-  .typing-text {
-    font-size: 38px;
-  }
-  
-  .rotating-text {
-    font-size: 38px;
-  }
-
-  .info-items {
-    justify-content: center;
-  }
-
-  .info-item {
-    font-size: 12px;
-    padding: 8px 15px;
-  }
+  .rotating-text-wrapper { height: 80px; margin: 16px 0; }
+  .typing-text { font-size: 38px; white-space: normal; word-break: break-word; }
+  .rotating-text { font-size: 38px; }
+  .info-items { justify-content: center; gap: 8px; }
+  .info-item { font-size: 12px; padding: 8px 15px; }
+  .hero-two .hero-sub-title { font-size: 11px; letter-spacing: 2px; }
+  .hero-two .button-v2 { padding: 12px 24px; font-size: 14px; }
+  .info-card { width: 100%; }
 }
 
+/* ─── Responsive — 480px ────────────────────────────────────── */
 @media (max-width: 480px) {
-  .rotating-text-wrapper {
-    height: 60px;
+  .hero-two {
+    padding: 70px 0 48px;
   }
-  
-  .typing-text {
-    font-size: 28px;
-  }
-  
-  .rotating-text {
-    font-size: 28px;
-  }
-
-  .info-item {
-    font-size: 11px;
-    padding: 6px 12px;
-  }
-
-  .avatar-badge {
-    font-size: 14px !important;
-  }
+  .rotating-text-wrapper { height: 60px; margin: 12px 0; }
+  .typing-text { font-size: 28px; }
+  .rotating-text { font-size: 28px; }
+  .info-item { font-size: 11px; padding: 6px 12px; }
+  .avatar-badge { font-size: 14px !important; }
+  .hero-two .button-v2 { width: 100%; justify-content: center; padding: 13px 20px; }
+  .info-items { gap: 6px; }
 }

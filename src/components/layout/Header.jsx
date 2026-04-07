@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { IoChevronDown } from 'react-icons/io5';
 import './Header.css';
+import headerLogo from '../../assets/images/backgroundremoved.png';
 
 const Header = ({ onHamburgerClick }) => {
   return (
@@ -11,7 +10,7 @@ const Header = ({ onHamburgerClick }) => {
             <div className="header__wrapper">
               <div className="header-logo">
                 <a href="/">
-                  <img src="/assets/images/logo.jpeg" alt="logo" style={{ maxHeight: '70px', objectFit: 'contain' }} />
+                  <img src={headerLogo} alt="MetaGen Technology" style={{ objectFit: 'contain', display: 'block' }} />
                 </a>
               </div>
               <div className="header__menus">
@@ -30,7 +29,7 @@ const Header = ({ onHamburgerClick }) => {
                       <a href="#process">PROCESS</a>
                     </li>
                     <li>
-                      <a href="#pricing">PRICING</a>
+                      <a href="#blogs">BLOGS</a>
                     </li>
                     <li>
                       <a href="#contact">CONTACT</a>
@@ -40,66 +39,19 @@ const Header = ({ onHamburgerClick }) => {
               </div>
               <div className="header__right">
                 <div className="header-social-hamburger">
-                  <div className="social-share">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-facebook-icon lucide-facebook"
-                          >
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-x-twitter"
-                          >
-                            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-linkedin-icon lucide-linkedin"
-                          >
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect width="4" height="12" x="2" y="9" />
-                            <circle cx="4" cy="4" r="2" />
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+                  <div className="header-social-links">
+                    <a href="#" target="_blank" rel="noreferrer" className="header-social-icon" title="Facebook">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="header-social-icon" title="Instagram">
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="header-social-icon" title="LinkedIn">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="header-social-icon" title="YouTube">
+                      <i className="fa-brands fa-youtube"></i>
+                    </a>
                   </div>
                   <button className="hamburger-menu" onClick={onHamburgerClick}>
                     <svg

@@ -96,7 +96,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="col-sm-6 col-md-6 col-xl-4 fade-anim"
+              className="col-12 col-sm-6 col-lg-4 fade-anim"
               data-direction="bottom"
               data-delay={service.delay}
             >
@@ -143,14 +143,6 @@ const Services = () => {
                   ))}
                 </div>
 
-                <a className="item-footer" href="/service-details">
-                  Read More
-                  <div className="footer-line"></div>
-                  <span className="footer-icon">
-                    <i className="fa-regular fa-arrow-up-right"></i>
-                    <i className="fa-regular fa-arrow-up-right"></i>
-                  </span>
-                </a>
               </div>
             </div>
           ))}

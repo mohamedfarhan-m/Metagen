@@ -35,7 +35,7 @@ class SpiderWebAnimation {
     // Create particles
     const geometry = new THREE.SphereGeometry(1.5, 16, 16);
     const material = new THREE.MeshBasicMaterial({ 
-      color: 0xfe0100,
+      color: 0xE2252B,
       transparent: true,
       opacity: 0.8
     });
@@ -88,7 +88,7 @@ class SpiderWebAnimation {
           
           const opacity = 1 - (distance / this.maxDistance);
           const material = new THREE.LineBasicMaterial({
-            color: 0x2a1f54,
+            color: 0x303030,
             transparent: true,
             opacity: opacity * 0.3
           });

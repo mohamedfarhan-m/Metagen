@@ -1,0 +1,117 @@
+/* ══════════════════════════════════════════════
+   WORKING PROCESS SECTION
+══════════════════════════════════════════════ */
+.working-process.section {
+  padding-top: 20px !important;
+  padding-bottom: 0px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.working-process__item .item-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+
+.working-process.section .section-header {
+  margin-bottom: 80px !important;
+}
+
+.working-process__item .item-content .process-number {
+  display: none !important;
+}
+
+/* ── Title colours ── */
+#process .section-title {
+  background: #0131e9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+#process .working-process__item .item-title {
+  background: #0131e9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  color: transparent !important;
+}
+
+/* ── Responsive — 1200px ── */
+@media (max-width: 1200px) {
+  .working-process.section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .working-process.section .section-header {
+    margin-bottom: 60px !important;
+  }
+}
+
+/* ── Responsive — 1024px ── */
+@media (max-width: 1024px) {
+  .working-process.section {
+    padding-top: 16px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .working-process.section .section-header {
+    margin-bottom: 48px !important;
+  }
+}
+
+/* ── Responsive — 768px ── */
+@media (max-width: 768px) {
+  .working-process.section {
+    padding-top: 12px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .working-process.section .section-header {
+    margin-bottom: 36px !important;
+  }
+
+  /* Stack working process items vertically */
+  .working-process__items {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .working-process__item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #process .working-process__item .item-title {
+    font-size: 20px !important;
+  }
+}
+
+/* ── Responsive — 480px ── */
+@media (max-width: 480px) {
+  .working-process.section {
+    padding-top: 8px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .working-process.section .section-header {
+    margin-bottom: 28px !important;
+  }
+
+  #process .working-process__item .item-title {
+    font-size: 18px !important;
+  }
+
+  .working-process__item .item-thumb {
+    margin-bottom: 16px !important;
+  }
+}

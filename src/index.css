@@ -65,6 +65,8 @@ html {
 }
 
 body {
+   background-color: #FBFCFD; /* force white */
+  color: var(--text);
   margin: 0;
   overflow-x: clip;
 }
@@ -248,49 +250,49 @@ template {
   --ff-fontawesome: "Font Awesome 7 pro", sans-serif;
   --ff-space-mono: "Space Mono", monospace;
   --ff-open-sans: "Open Sans", sans-serif;
-  --primary-color: #bff747;
-  --primary-color-rgb: 191, 247, 71;
-  --foreground-color: #fff;
-  --foreground-color-rgb: 255, 255, 255;
-  --background-color: #121212;
-  --background-color-rgb: 18, 18, 18;
-  --background-color2: #0d0d0c;
-  --background-color2-rgb: 13, 13, 12;
+  --primary-color: #08C0F7;
+  --primary-color-rgb: 8, 192, 247;
+  --foreground-color: #3D3F40;
+  --foreground-color-rgb: 61, 63, 64;
+  --background-color: #FBFCFD;
+  --background-color-rgb: 255, 255, 255;
+  --background-color2: #FBFCFD;
+  --background-color2-rgb: 255, 255, 255;
   --background-color3: #000;
-  --background-color3-rgb: 0, 0, 0;
-  --background-color4: #141413;
-  --background-color4-rgb: 20, 20, 19;
-  --background-color5: #191919;
-  --background-color5-rgb: 25, 25, 25;
-  --background-color6: #2a2a2a;
-  --background-color6-rgb: 42, 42, 42;
-  --background-color7: #16191b;
-  --background-color7-rgb: 22, 25, 27;
-  --background-color8: #141414;
-  --background-color8-rgb: 20, 20, 20;
-  --background-color9: #171717;
-  --background-color9-rgb: 23, 23, 23;
-  --background-color10: #272727;
-  --background-color10-rgb: 39, 39, 39;
-  --background-color11: #111;
-  --background-color11-rgb: 17, 17, 17;
-  --text-color: #2c1654;
-  --text-color-rgb: 184, 185, 185;
-  --text-color2: #141413;
-  --text-color2-rgb: 20, 20, 19;
-  --text-color3: #cfc7c7;
-  --text-color3-rgb: 207, 199, 199;
-  --text-color4: #878c8f;
-  --text-color4-rgb: 135, 140, 143;
-  --text-color5: #2c1654;
-  --text-color5-rgb: 190, 189, 189;
+  --background-color3-rgb: 61, 63, 64;
+  --background-color4: #3D3F40;
+  --background-color4-rgb: 61, 63, 64;
+  --background-color5: #3D3F40;
+  --background-color5-rgb: 61, 63, 64;
+  --background-color6: #3D3F40;
+  --background-color6-rgb: 61, 63, 64;
+  --background-color7: #3D3F40;
+  --background-color7-rgb: 61, 63, 64;
+  --background-color8: #3D3F40;
+  --background-color8-rgb: 61, 63, 64;
+  --background-color9: #3D3F40;
+  --background-color9-rgb: 61, 63, 64;
+  --background-color10: #3D3F40;
+  --background-color10-rgb: 61, 63, 64;
+  --background-color11: #3D3F40;
+  --background-color11-rgb: 61, 63, 64;
+  --text-color: #3D3F40;
+  --text-color-rgb: 61, 63, 64;
+  --text-color2: #3D3F40;
+  --text-color2-rgb: 0, 0, 0;
+  --text-color3: #3D3F40;
+  --text-color3-rgb: 61, 63, 64;
+  --text-color4: #3D3F40;
+  --text-color4-rgb: 61, 63, 64;
+  --text-color5: #3D3F40;
+  --text-color5-rgb: 61, 63, 64;
   --text-color6: #000;
   --text-color6-rgb: 0, 0, 0;
-  --text-color7: #121212;
-  --text-color7-rgb: 18, 18, 18;
+  --text-color7: #3D3F40;
+  --text-color7-rgb: 61, 63, 64;
 }
 :root .primary-color-2 {
-  --primary-color: #ffa200;
+  --primary-color: #08C0F7;
   --primary-color-rgb: 255, 162, 0;
 }
 
@@ -1663,7 +1665,7 @@ html:has(.modal-open) {
   height: 40px;
   border-radius: 5px;
   color: var(--foreground-color);
-  background: #2a2a2a;
+  background: #3D3F40;
   font-size: 16px;
   line-height: 1;
   border: 1px solid rgba(var(--foreground-color-rgb), 0.3);
@@ -2609,7 +2611,7 @@ html:has(.modal-open) {
   gap: 40px;
   padding: 38px 60px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #242424 28.37%, #0c0c0c 100%);
+  background: linear-gradient(90deg, #3D3F40 28.37%, #3D3F40 100%);
   width: max-content;
   margin-bottom: 25px;
 }
@@ -2731,7 +2733,7 @@ html:has(.modal-open) {
   line-height: 1;
   padding: 25px 35px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #242424 28.37%, #0c0c0c 100%);
+  background: linear-gradient(90deg, #3D3F40 28.37%, #3D3F40 100%);
   width: max-content;
 }
 @media only screen and (max-width: 1439.98px) {
@@ -3058,7 +3060,7 @@ html:has(.modal-open) {
   text-transform: uppercase;
 }
 .about-two__thumb {
-  background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);
+  background: linear-gradient(180deg, #3D3F40 0%, #3D3F40 100%);
   border-radius: 500px 500px 0 0;
   margin-left: 15px;
   margin-bottom: 15px;
@@ -6419,7 +6421,7 @@ html:has(.modal-open) {
   height: 100px;
   font-weight: 700;
   color: var(--foreground-color);
-  background: #333;
+  background: #3D3F40;
   border-radius: 50px;
   font-size: 40px;
 }
@@ -6511,7 +6513,7 @@ html:has(.modal-open) {
   height: 100px;
   font-weight: 700;
   color: var(--foreground-color);
-  background: #333;
+  background: #3D3F40;
   border-radius: 50px;
   font-size: 40px;
 }
@@ -6833,13 +6835,13 @@ html:has(.modal-open) {
   width: 80px;
   height: 50px;
   border-radius: 10px;
-  background: #242424;
+  background: #3D3F40;
   color: var(--heading-color);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  border: 1px solid #242424;
+  border: 1px solid #3D3F40;
 }
 @media only screen and (max-width: 1199.98px) {
   .blog-details__navigation .nav-item .icon {
@@ -7196,7 +7198,7 @@ html:has(.modal-open) {
 .choose-us__item .item-content {
   padding: 30px;
   border-radius: 20px;
-  background: linear-gradient(0deg, #121212 0%, #2a2a2a 100%);
+  background: linear-gradient(0deg, #3D3F40 0%, #3D3F40 100%);
   width: 100%;
   height: 100%;
 }
@@ -7919,7 +7921,7 @@ html:has(.modal-open) {
   padding-right: 5px;
 }
 .testimonial-two__reviewer-list::-webkit-scrollbar {
-  background-color: #464646;
+  background-color: #3D3F40;
   border-radius: 0px;
   width: 8px;
   box-shadow: none;
@@ -9162,7 +9164,7 @@ html:has(.modal-open) {
 .contact-two__form .input:focus, .contact-two__form .custom-select__trigger:focus, .contact-two__form .textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  background-color: #262626;
+  background-color: #3D3F40;
 }
 @media only screen and (max-width: 1439.98px) {
   .contact-two__form .input, .contact-two__form .custom-select__trigger, .contact-two__form .textarea {
@@ -9290,7 +9292,7 @@ html:has(.modal-open) {
 }
 .contact-two__form .custom-select:focus-within .custom-select__trigger {
   border-color: var(--primary-color);
-  background-color: #262626;
+  background-color: #3D3F40;
 }
 .contact-two__form .custom-select input[type=radio]:nth-of-type(1):checked ~ .custom-select__options label:nth-of-type(1) {
   background: rgba(var(--primary-color-rgb), 0.1);
@@ -11162,6 +11164,81 @@ html:has(.modal-open) {
 
 .screenfix_left {
   margin-left: calc((-100vw + 100%) / 2);
+}
+/* ===== THEME OVERRIDE (ADD AT END ONLY) ===== */
+
+/* Remove orange/pink overlays */
+[class*="overlay"],
+.hero::before,
+.hero::after {
+  background: none !important;
+}
+
+/* Buttons */
+button,
+.btn,
+[class*="btn"] {
+  background: linear-gradient(135deg, #08C0F7, #075EE9) !important;
+  color: #FBFCFD !important;
+  border: none !important;
+}
+
+/* Navbar / Header */
+nav,
+.navbar,
+.header {
+  background-color: #FBFCFD !important;
+  color: #3D3F40 !important;
+}
+
+/* Sections stay light */
+section,
+.container,
+.card,
+.box {
+  background-color: #FBFCFD !important;
+  color: #3D3F40 !important;
+}
+
+/* Text - dark on light sections only */
+h1, h2, h3, h4, h5, h6 {
+  color: #3D3F40;
+}
+p, span {
+  color: #3D3F40;
+}
+
+/* Dark sections keep white text */
+.footer-two h1, .footer-two h2, .footer-two h3,
+.footer-two h4, .footer-two h5, .footer-two h6,
+.footer-two p, .footer-two span, .footer-two li,
+.footer-copyright h1, .footer-copyright h2, .footer-copyright h3,
+.footer-copyright h4, .footer-copyright h5, .footer-copyright h6,
+.footer-copyright p, .footer-copyright span,
+.hamburger-area h1, .hamburger-area h2, .hamburger-area h3,
+.hamburger-area h4, .hamburger-area h5, .hamburger-area h6,
+.hamburger-area p, .hamburger-area span,
+.hamburger_wrapper h1, .hamburger_wrapper h2, .hamburger_wrapper h3,
+.hamburger_wrapper p, .hamburger_wrapper span {
+  color: #FBFCFD !important;
+}
+
+/* Links / highlights */
+a,
+.active {
+  color: #075EE9;
+}
+
+/* Dark section links stay white */
+.footer-two a,
+.hamburger-area a,
+.hamburger_wrapper a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.footer-two a:hover,
+.hamburger-area a:hover,
+.hamburger_wrapper a:hover {
+  color: #08C0F7 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

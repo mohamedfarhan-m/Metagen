@@ -1,4 +1,10 @@
 import React from 'react';
+import './WorkingProcess.css';
+import devCodingImg from '../assets/images/dev&cod.jpeg';
+import discoveryImg  from '../assets/images/Disc_Analysis0.jpg.jpeg';
+import planningImg   from '../assets/images/planing&design.jpg';
+import testingImg    from '../assets/images/Testing&quality.jpg';
+import deploymentImg from '../assets/images/Deployment & s1.png';
 
 const WorkingProcess = () => {
   const processes = [
@@ -6,35 +12,35 @@ const WorkingProcess = () => {
       id: 1,
       title: "Discovery &\nAnalysis",
       description: "We analyze your business requirements, understand your goals, and identify the best technology solutions",
-      image: "https://axora-html.netlify.app/assets/images/working-process/working-process-thumb-1.png",
+      image: discoveryImg,
       number: "01"
     },
     {
       id: 2,
       title: "Planning &\nDesign",
       description: "Our team creates detailed architecture, wireframes, and prototypes aligned with your vision",
-      image: "https://axora-html.netlify.app/assets/images/working-process/working-process-thumb-1.png",
+      image: planningImg,
       number: "02"
     },
     {
       id: 3,
       title: "Development &\nCoding",
       description: "Expert developers build your solution using cutting-edge technologies and best practices",
-      image: "https://axora-html.netlify.app/assets/images/working-process/working-process-thumb-1.png",
+      image: devCodingImg,
       number: "03"
     },
     {
       id: 4,
       title: "Testing &\nQuality Assurance",
       description: "Rigorous testing ensures bug-free, secure, and high-performance software delivery",
-      image: "https://axora-html.netlify.app/assets/images/working-process/working-process-thumb-1.png",
+      image: testingImg,
       number: "04"
     },
     {
       id: 5,
       title: "Deployment &\nSupport",
       description: "We launch your solution and provide ongoing maintenance, updates, and technical support",
-      image: "https://axora-html.netlify.app/assets/images/working-process/working-process-thumb-1.png",
+      image: deploymentImg,
       number: "05"
     }
   ];
@@ -72,7 +78,7 @@ const WorkingProcess = () => {
                     <feOffset></feOffset>
                     <feGaussianBlur stdDeviation="50"></feGaussianBlur>
                     <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.74902 0 0 0 0 0.968627 0 0 0 0 0.278431 0 0 0 1 0"></feColorMatrix>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.886 0 0 0 0 0.145 0 0 0 0 0.169 0 0 0 1 0"></feColorMatrix>
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2081_102"></feBlend>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2081_102" result="shape"></feBlend>
                   </filter>
@@ -82,7 +88,7 @@ const WorkingProcess = () => {
                     <feOffset></feOffset>
                     <feGaussianBlur stdDeviation="15"></feGaussianBlur>
                     <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.74902 0 0 0 0 0.968627 0 0 0 0 0.278431 0 0 0 1 0"></feColorMatrix>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.886 0 0 0 0 0.145 0 0 0 0 0.169 0 0 0 1 0"></feColorMatrix>
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2081_102"></feBlend>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2081_102" result="shape"></feBlend>
                   </filter>
@@ -92,7 +98,7 @@ const WorkingProcess = () => {
                     <feOffset></feOffset>
                     <feGaussianBlur stdDeviation="15"></feGaussianBlur>
                     <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.74902 0 0 0 0 0.968627 0 0 0 0 0.278431 0 0 0 1 0"></feColorMatrix>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.886 0 0 0 0 0.145 0 0 0 0 0.169 0 0 0 1 0"></feColorMatrix>
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2081_102"></feBlend>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2081_102" result="shape"></feBlend>
                   </filter>
@@ -102,7 +108,7 @@ const WorkingProcess = () => {
                     <feOffset></feOffset>
                     <feGaussianBlur stdDeviation="15"></feGaussianBlur>
                     <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.74902 0 0 0 0 0.968627 0 0 0 0 0.278431 0 0 0 1 0"></feColorMatrix>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.886 0 0 0 0 0.145 0 0 0 0 0.169 0 0 0 1 0"></feColorMatrix>
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2081_102"></feBlend>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2081_102" result="shape"></feBlend>
                   </filter>
@@ -131,7 +137,6 @@ const WorkingProcess = () => {
                       ))}
                     </h5>
                     <p>{process.description}</p>
-                    <span className="process-number">{process.number}</span>
                   </div>
                 </div>
               ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import deploymentImg from '../assets/images/Deployment & s1.png';
 
 const About = () => {
   const stats = [
@@ -105,9 +106,9 @@ const About = () => {
               {/* Image */}
               <div className="about-image">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" 
-                  alt="Team collaboration"
-                  className="img-fluid rounded-4"
+                  src={deploymentImg}
+                  alt="Deployment"
+                  className="img-fluid"
                 />
                 <div className="image-badge">
                   <div className="badge-icon">
