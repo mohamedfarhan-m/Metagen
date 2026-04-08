@@ -227,7 +227,7 @@
 .pm-title {
   font-size: 22px;
   font-weight: 800;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -259,7 +259,7 @@
 }
 
 .pm-close:hover {
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   border-color: transparent;
   color: #FBFCFD;
   transform: rotate(90deg);
@@ -345,7 +345,7 @@
   gap: 10px;
   width: 100%;
   padding: 14px 24px;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   color: #FBFCFD;
   border: none;
   border-radius: 12px;
@@ -408,7 +408,7 @@
 
 .pm-success-icon {
   font-size: 56px;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -461,8 +461,17 @@
   .cta-description { font-size: 15px; margin-bottom: 24px; }
   .cta-actions { margin-top: 32px; gap: 12px; }
   .cta-trigger-btn {
-    width: 100% !important;
-    justify-content: space-between !important;
+    width: auto !important;
+    justify-content: center !important;
+    padding: 9px 18px !important;
+    font-size: 13px !important;
+    gap: 8px !important;
+  }
+  .cta-trigger-btn .button-icon {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
   }
   .cta-features { flex-direction: column; gap: 10px; }
 
@@ -484,6 +493,17 @@
   .contact-icon i { font-size: 15px; }
   .contact-value { font-size: 13px; }
   .cta-contact-link { padding: 14px 16px; gap: 12px; border-radius: 12px; }
+  .cta-trigger-btn {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
+    gap: 6px !important;
+  }
+  .cta-trigger-btn .button-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    min-height: 26px !important;
+  }
   .pm-title { font-size: 18px; }
   .pm-btn { font-size: 14px; padding: 13px 20px; }
   .pm-header { padding: 18px 18px 14px; }

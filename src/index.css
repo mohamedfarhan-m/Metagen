@@ -11178,7 +11178,7 @@ html:has(.modal-open) {
 button,
 .btn,
 [class*="btn"] {
-  background: linear-gradient(135deg, #08C0F7, #075EE9) !important;
+  background: linear-gradient(135deg, #08C0F7, #0131e9) !important;
   color: #FBFCFD !important;
   border: none !important;
 }
@@ -11226,7 +11226,7 @@ p, span {
 /* Links / highlights */
 a,
 .active {
-  color: #075EE9;
+  color: #0131e9;
 }
 
 /* Dark section links stay white */

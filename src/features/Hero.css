@@ -9,7 +9,7 @@
   background: linear-gradient(
     120deg,
     #0131e9 0%,
-    #075ee9 35%,
+    #0131e9 35%,
     #0099ff 70%,
     #00d4ff 100%
   );
@@ -101,6 +101,8 @@
 /* ── Typing text ── */
 .typing-text {
   font-size: clamp(26px, 4.8vw, 65px);
+    white-space: nowrap;     /* ❗ Prevent line break */
+  overflow: visible;       
   font-weight: 800;
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;

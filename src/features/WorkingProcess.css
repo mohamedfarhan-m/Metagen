@@ -115,3 +115,101 @@
     margin-bottom: 16px !important;
   }
 }
+/* ============================= */
+/* MOBILE FIX - WORKING PROCESS */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Section title — bigger on mobile */
+  #process .section-title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Hide the SVG connector line — causes layout issues on mobile */
+  .working-process__shape {
+    display: none !important;
+  }
+
+  /* Stack items vertically */
+  .working-process__items {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    margin-top: 0 !important;
+  }
+
+  .working-process__item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+
+  /* THE ROOT CAUSE FIX: reset the negative margin that creates the gap */
+  .working-process__item .item-thumb {
+    width: 130px !important;
+    height: 130px !important;
+    margin-bottom: 16px !important; /* override the -160px negative margin */
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+  }
+
+  .working-process__item .item-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 50% !important;
+  }
+
+  /* Remove any pseudo-element spacing from item-content */
+  .working-process__item .item-content {
+    margin-top: 0 !important;
+    padding: 0 8px !important;
+  }
+
+  .working-process__item .item-content::after {
+    display: none !important;
+  }
+
+  #process .working-process__item .item-title {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+  }
+
+  .working-process__item .item-content p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    color: #3D3F40 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #process .section-title {
+    font-size: 28px !important;
+  }
+
+  .working-process__item {
+    max-width: 100% !important;
+  }
+
+  .working-process__item .item-thumb {
+    width: 110px !important;
+    height: 110px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #process .working-process__item .item-title {
+    font-size: 18px !important;
+  }
+}

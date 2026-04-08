@@ -1,7 +1,7 @@
 /* Footer Two Section - Override Template */
 .footer-two {
   position: relative;
-  background: #3D3F40 !important;
+  background: #0131e9 !important;
   overflow: hidden;
   border: none !important;
   border-top: none !important;
@@ -17,8 +17,9 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.6;
-}
+  opacity: 0.2 !important;
+  display: none;
+} 
 
 .footer-canvas canvas {
   display: block;
@@ -27,7 +28,7 @@
 }
 
 .footer-two.section {
-  background: #3D3F40 !important;
+  background: #0131e9 !important;
   z-index: 2;
   padding: 0 !important;
 }
@@ -97,7 +98,7 @@
   position: relative;
   z-index: 1;
   padding: 60px 0;
-  background: #3D3F40;
+  background: #0131e9;
   overflow: hidden;
   box-shadow: inset 0 10px 50px rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -115,7 +116,7 @@
   bottom: 0;
   background:
     radial-gradient(circle at 20% 50%, rgba(8, 192, 247, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(61, 63, 64, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 80% 50%, rgba(1, 49, 233, 0.12) 0%, transparent 50%);
   opacity: 0.2;
   z-index: 0;
   animation: backgroundPulse 15s ease-in-out infinite;
@@ -259,7 +260,7 @@
 }
 
 .sliding-text .text.v3 {
-  color: #0131e9;
+  color: #7aaeff;
 }
 
 @keyframes marqueeScroll {
@@ -279,7 +280,8 @@
   position: relative;
   z-index: 1;
   padding: 0;
-  background: transparent !important;
+  background: #0131e9 !important;
+
   background-image: none;
 }
 
@@ -317,15 +319,28 @@
 }
 
 .footer-title.title-highlight {
-  background: linear-gradient(135deg, #0131e9 0%, #0131e9 50%, #0131e9 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 5s ease infinite;
-  position: relative;
-}
+  background: linear-gradient(
+    135deg,
+    #00d4ff 0%,
+    #08C0F7 40%,
+    #7aaeff 70%,
+    #ffffff 100%
+  );
 
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientShift 4s ease infinite;
+}
+.footer-title.title-highlight,
+.footer-title.title-highlight * {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
 @keyframes gradientShift {
   0%, 100% { background-position: 0% center; }
   50% { background-position: 100% center; }
@@ -437,7 +452,7 @@
 .office-item .label {
   display: block;
   font-size: 12px;
-  color: #0131e9;
+  color: #7aaeff;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -553,9 +568,9 @@
 .modal-title {
   font-size: 42px;
   font-weight: 700;
-  color: #3D3F40;
+  color: #0131e9;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #075EE9 0%, #08C0F7 100%);
+  background: linear-gradient(135deg, #0131e9 0%, #08C0F7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -591,7 +606,7 @@
 .form-group label {
   font-size: 14px;
   font-weight: 500;
-  color: #3D3F40;
+  color: #0131e9;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -611,7 +626,7 @@
   background: rgba(61, 63, 64, 0.03);
   border: 1px solid rgba(61, 63, 64, 0.15);
   border-radius: 10px;
-  color: #3D3F40;
+  color: #0131e9;
   font-size: 15px;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -636,7 +651,7 @@
 .form-group select { cursor: pointer; }
 .form-group select option {
   background: #FBFCFD;
-  color: #3D3F40;
+  color: #0131e9;
   padding: 10px;
 }
 
@@ -649,7 +664,7 @@
 .submit-button {
   margin-top: 15px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   border: none;
   border-radius: 12px;
   color: #FBFCFD;
@@ -708,8 +723,8 @@
   position: relative;
   z-index: 1;
   padding: 30px 0;
-  background: #3D3F40;
-  border-top: 1px solid rgba(8, 192, 247, 0.3);
+  background: #001ab8;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .copyright-content {
@@ -725,9 +740,9 @@
 }
 
 .copyright-content .company-name {
-  color: #0131e9;
+  color: #7aaeff;
   font-weight: 600;
-  text-shadow: 0 0 10px rgba(1, 49, 233, 0.3);
+  text-shadow: 0 0 10px rgba(122, 174, 255, 0.3);
 }
 
 .copyright-content i.fa-heart {
@@ -850,4 +865,20 @@
 
   .footer-copyright { padding: 24px 0; }
   .copyright-content p { font-size: 12px; letter-spacing: 0; }
+}
+.footer-two {
+  background: linear-gradient(135deg, #0131e9, #08C0F7) !important;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-two__top::before,
+.footer-two__top::after {
+  display: none !important;
+}
+.footer-two,
+.footer-two__top,
+.footer-two__main,
+.footer-two__main-inner {
+  background: #0131e9 !important;
 }

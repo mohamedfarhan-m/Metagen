@@ -5,7 +5,7 @@
 
 /* ── Hero ── */
 .privacy-hero {
-  background: linear-gradient(135deg, #075EE9 0%, #08C0F7 100%);
+  background: linear-gradient(135deg, #0131e9 0%, #08C0F7 100%);
   padding: 80px 0 56px;
   color: #FBFCFD;
   position: relative;
@@ -97,7 +97,7 @@
 }
 
 .privacy-section a {
-  color: #075EE9;
+  color: #0131e9;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -131,7 +131,7 @@
 }
 
 .privacy-contact i {
-  color: #075EE9;
+  color: #0131e9;
   width: 18px;
   flex-shrink: 0;
   font-size: 15px;

@@ -1,9 +1,9 @@
 :root {
   /* ── Core Design System ── */
   --primary-1:         #08C0F7;
-  --primary-2:         #075EE9;
+  --primary-2:         #0131e9;
   --primary-3:         #064ED1;
-  --primary-gradient:  linear-gradient(135deg, #08C0F7 0%, #075EE9 100%);
+  --primary-gradient:  linear-gradient(135deg, #08C0F7 0%, #0131e9 100%);
   --primary-gradient-hover: linear-gradient(135deg, #09ceff 0%, #0868ff 100%);
 
   --bg-light:          #FBFCFD;

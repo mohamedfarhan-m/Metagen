@@ -100,7 +100,7 @@
 }
 
 .hamburger_close_btn:hover {
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%) !important;
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%) !important;
   border-color: transparent !important;
   color: #FBFCFD !important;
   transform: rotate(90deg) !important;
@@ -245,7 +245,7 @@
 }
 
 .hamburger_menu .mean-nav ul li a.mean-expand:hover {
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%) !important;
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%) !important;
   border-color: transparent !important;
   color: #FBFCFD !important;
 }
@@ -304,7 +304,7 @@
   align-items: center !important;
   gap: 14px !important;
   margin-bottom: 24px !important;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%) !important;
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%) !important;
   color: #FBFCFD !important;
   padding: 12px 22px !important;
   border-radius: 999px !important;
@@ -391,7 +391,7 @@
   height: 36px !important;
   min-width: 36px !important;
   min-height: 36px !important;
-  background: linear-gradient(135deg, #08C0F7 0%, #075EE9 100%) !important;
+  background: linear-gradient(135deg, #08C0F7 0%, #0131e9 100%) !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
